@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trishabh Group - Premium Residential Developer in Chembur</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    
+    <!-- Favicon (Browser Tab/Search Bar Logo) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23D4621A'/%3E%3Crect x='18' y='28' width='64' height='18' rx='1' fill='white'/%3E%3Crect x='38' y='46' width='22' height='36' rx='1' fill='white'/%3E%3Crect x='64' y='28' width='18' height='10' fill='%23D4621A'/%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+    <div class="cursor-view">View</div>
+
+    <!-- Hero Wrapper (contains header and hero with rounded corners) -->
+    <div class="hero-wrapper">
+        <div class="hero-bg">
+            <video autoplay muted playsinline id="hero-vid">
+                <source src="images/Drone_shot_over_apartment_building_202605181303.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <script>
+                const heroVid = document.getElementById('hero-vid');
+                heroVid.addEventListener('loadedmetadata', function() {
+                    if (heroVid.duration > 5) {
+                        heroVid.currentTime = heroVid.duration - 5;
+                    }
+                });
+                heroVid.addEventListener('timeupdate', function() {
+                    if (heroVid.duration > 5 && heroVid.currentTime >= heroVid.duration - 0.2) {
+                        heroVid.currentTime = heroVid.duration - 5;
+                    }
+                });
+            </script>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <!-- Trishabh Group Official Logo -->
+                    <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#D4621A"/>
+                        <path d="M 18 28 L 64 28 L 64 38 L 82 38 L 82 46 L 62 46 L 62 82 L 38 82 L 38 46 L 18 46 Z" fill="white"/>
+                    </svg>
+                    <div class="logo-text-block">
+                        <span class="logo-name">TRISHABH</span>
+                        <span class="logo-sub">GROUP</span>
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <div class="nav-item">
+                        <a href="#" class="active">Home 
+                            <svg class="chevron" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#">Main Showcase</a>
+                            <a href="#projects">Trishabh Greens</a>
+                            <a href="#projects">Trishabh Signet</a>
+                            <a href="#projects">Trishabh Miraya</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#about">About Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#amenities">Amenities</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#projects">Blog</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#pages">Pages 
+                            <svg class="chevron" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#about">Our Developer Legacy</a>
+                            <a href="#projects">RERA Certifications</a>
+                            <a href="#amenities">Luxury Amenities</a>
+                            <a href="#contact">Schedule Site Visit</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contact">Contact Us</a>
+                    </div>
+                </nav>
+                <a href="#contact" class="header-btn hover-trigger">Contact Now <span class="arrow">↗</span></a>
+                <button class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <div class="hero-badge"><span class="dot"></span> A Better Way To Experience Home</div>
+                    <h1 class="hero-title">Your Dream Apartment in<br>the Perfect Location</h1>
+                    <p class="hero-subtitle">Experience timeless modern aesthetics crafted with architectural quality, luxury lifestyle, and everyday comfort. A legacy-driven real estate brand you can trust.</p>
+                </div>
+                <div class="hero-card fade-left">
+                    <div class="hero-card-img">
+                        <img src="images/facade1.png" alt="Luxury Interior">
+                    </div>
+                    <div class="hero-card-info">
+                        <p class="hero-card-quote">"Find your perfect home designed for comfort, style, and everyday living"</p>
+                        <a href="#contact" class="hero-card-link">Book A Home <span class="arrow-circle">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-images fade-right">
+                <div class="about-img-main">
+                    <!-- High-rise apartment building -->
+                    <img src="images/facade2.png" alt="Trishabh Apartment Building" loading="lazy">
+                </div>
+                <div class="about-img-secondary">
+                    <!-- Modern apartment interior -->
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=600" alt="Trishabh Interior" loading="lazy">
+                </div>
+                <div class="rotating-badge">
+                    <svg viewBox="0 0 100 100" class="badge-text">
+                        <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
+                        <text fill="#ffffff" font-size="12" font-weight="500" letter-spacing="2"><textPath href="#curve">Contact Us * Contact Us * </textPath></text>
+                    </svg>
+                    <div class="badge-icon">
+                        <!-- Geometric layer icon matching screenshot -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-avatars">
+                    <div class="avatar-stack">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100" alt="Resident" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100" alt="Resident" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100" alt="Resident" loading="lazy">
+                    </div>
+                    <span>Happy families comfortably<br>in our apartments.</span>
+                </div>
+            </div>
+            
+            <div class="about-content fade-left">
+                <div class="pill-label"><span class="dot"></span> About Trishabh Group</div>
+                <h2 class="section-heading">Building homes Mumbaikars<br>have trusted since 1999</h2>
+                <p class="section-desc">Founded in 1999 by the Jain family, Trishabh Group has been delivering premium residential apartments in Chembur and Navi Mumbai for over 25 years. We are known for 100% Occupation Certificate record, timely possession, and a customer-first approach that has earned the trust of thousands of families.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div>
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Years of experience</div>
+                        </div>
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">OC Received</div>
+                        </div>
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-bottom">
+                    <a href="#about" class="btn-primary hover-trigger">More About Us <span class="arrow">↗</span></a>
+                    <div class="founder-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100" alt="Founder" loading="lazy">
+                        <div class="founder-info">
+                            <div class="founder-name">Jain Family</div>
+                            <div class="founder-role">Founded 1999</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center;">
+                <div class="pill-label"><span class="dot"></span> Our Amenities</div>
+                <h2 class="section-heading">Discover luxurious lifestyle amenities</h2>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-card hover-trigger fade-up" style="transition-delay: 0.1s;">
+                    <div class="amenity-card-content">
+                        <h3>Yoga & Meditation Zone</h3>
+                        <p>Dedicated spaces for your physical and mental wellbeing.</p>
+                        <hr class="amenity-divider">
+                        <span class="amenity-link">View Details <span class="arrow-circle">↗</span></span>
+                    </div>
+                </div>
+                <div class="amenity-card hover-trigger fade-up" style="transition-delay: 0.2s;">
+                    <div class="amenity-card-content">
+                        <h3>Secure Parking Area</h3>
+                        <p>Dedicated parking areas with controlled access, providing a safe.</p>
+                        <hr class="amenity-divider">
+                        <span class="amenity-link">View Details <span class="arrow-circle">↗</span></span>
+                    </div>
+                </div>
+                <div class="amenity-card hover-trigger fade-up" style="transition-delay: 0.3s;">
+                    <div class="amenity-card-content">
+                        <h3>Children's Play Area</h3>
+                        <p>Safe, engaging, and thoughtfully designed kids zones.</p>
+                        <hr class="amenity-divider">
+                        <span class="amenity-link">View Details <span class="arrow-circle">↗</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenities-footer fade-up">
+                <div class="amenities-footer-top">
+                    <div class="amenities-contact-avatars">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100" alt="Consultant" loading="lazy">
+                        <div class="phone-icon-circle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="amenities-footer-text">Let's build something exceptional together. <a href="#contact" class="hover-trigger">Get Your Free Quote Today</a></div>
+                </div>
+                <div class="rating-box-simple">
+                    <span class="rating-score">4.9/5</span>
+                    <div class="rating-stars">★★★★★</div>
+                    <span class="rating-count">Our 4200 Review</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartment Plans Section -->
+    <section class="plans section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center;">
+                <div class="pill-label"><span class="dot"></span> Apartments Plans</div>
+                <h2 class="section-heading" style="margin-top: 16px;">Discover spacious apartment<br>plans with modern layouts</h2>
+            </div>
+            
+            <div class="plans-grid">
+                <div class="plan-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="plan-card-img hover-trigger">
+                        <!-- Trishabh Greens - apartment building -->
+                        <img src="images/greens.jpeg" alt="Trishabh Greens" loading="lazy">
+                    </div>
+                    <div class="plan-card-body">
+                        <div class="plan-tag"><span class="dot"></span> Ready to Move</div>
+                        <h3>Trishabh Greens</h3>
+                        <div class="plan-specs">
+                            <div class="plan-spec"><span class="plan-spec-label">Area (sq.ft)</span><span class="plan-spec-value">650 – 1,350</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Type</span><span class="plan-spec-value">1, 2 & 3 BHK</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Price</span><span class="plan-spec-value">₹1.05 Cr onwards</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="plan-card-img hover-trigger">
+                        <!-- Trishabh Signet - luxury high-rise -->
+                        <img src="images/signet.jpeg" alt="Trishabh Signet" loading="lazy">
+                    </div>
+                    <div class="plan-card-body">
+                        <div class="plan-tag"><span class="dot"></span> Luxury</div>
+                        <h3>Trishabh Signet</h3>
+                        <div class="plan-specs">
+                            <div class="plan-spec"><span class="plan-spec-label">Area (sq.ft)</span><span class="plan-spec-value">1,400 – 1,900</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Type</span><span class="plan-spec-value">3 & 4 BHK</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Price</span><span class="plan-spec-value">₹3.80 Cr onwards</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="plan-card-img hover-trigger">
+                        <!-- Trishabh Miraya - modern apartment -->
+                        <img src="images/miraya.jpeg" alt="Trishabh Miraya" loading="lazy">
+                    </div>
+                    <div class="plan-card-body">
+                        <div class="plan-tag"><span class="dot"></span> New Launch</div>
+                        <h3>Trishabh Miraya</h3>
+                        <div class="plan-specs">
+                            <div class="plan-spec"><span class="plan-spec-label">Area (sq.ft)</span><span class="plan-spec-value">820 – 1,050</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Type</span><span class="plan-spec-value">2 BHK</span></div>
+                            <div class="plan-spec"><span class="plan-spec-label">Price</span><span class="plan-spec-value">₹2.65 Cr onwards</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plans-footer fade-up">
+                <div class="plans-badge">Consultation</div>
+                <div class="plans-footer-text">Elevate Your Lifestyle with Expertly Designed Homes - <a href="#contact" class="hover-trigger">Where Comfort Meets Modern Living</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose section-padding">
+        <div class="container why-choose-inner">
+            <div class="why-choose-header fade-up">
+                <div class="pill-label pill-label-dark"><span class="dot dot-gold"></span> Why Choose Us</div>
+                <h2 class="section-heading white why-choose-heading">Why choose us for better modern<br>apartment living</h2>
+            </div>
+            <div class="why-choose-grid">
+                <div class="fade-right">
+                    <div class="why-choose-img hover-trigger">
+                        <!-- Apartment high-rise exterior -->
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=800" alt="Trishabh Apartments" loading="lazy">
+                    </div>
+                </div>
+                <div class="fade-left">
+                    <p class="section-desc white">We offer thoughtfully designed apartments that blend modern architecture, premium amenities, and everyday comfort. With prime locations in Chembur and Navi Mumbai, quality construction, and a focus on lifestyle convenience, our homes provide a better way to live, relax, and grow.</p>
+                    
+                    <div class="why-stats">
+                        <div class="why-stat">
+                            <div class="why-stat-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            </div>
+                            <div>
+                                <div class="why-stat-number"><span class="count-up" data-target="15">0</span>+</div>
+                                <div class="why-stat-label">Premium lifestyle amenities</div>
+                            </div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <div class="why-stat-number">24/7</div>
+                                <div class="why-stat-label">Security & maintenance support</div>
+                            </div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                            </div>
+                            <div>
+                                <div class="why-stat-number"><span class="count-up" data-target="100">0</span>%</div>
+                                <div class="why-stat-label">Thoughtfully planned spaces</div>
+                            </div>
+                        </div>
+                        <div class="why-stat">
+                            <div class="why-stat-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div>
+                                <div class="why-stat-number"><span class="count-up" data-target="98">0</span>%</div>
+                                <div class="why-stat-label">Resident satisfaction rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-bottom">
+                        <a href="#contact" class="btn-primary hover-trigger">Contact Us <span class="arrow">↗</span></a>
+                        <div class="phone-card">
+                            <div class="phone-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="phone-label">Call Us Today!</div>
+                                <div class="phone-number">+91 98765 43210</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center;">
+                <div class="pill-label"><span class="dot"></span> Our Projects</div>
+                <h2 class="section-heading">Residential projects built for modern lifestyles</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-up hover-view-trigger" style="transition-delay: 0.1s;">
+                    <img src="images/greens.jpeg" alt="Trishabh Greens" loading="lazy">
+                    <div class="project-card-overlay">
+                        <h3>Trishabh Greens</h3>
+                        <div class="project-cat">1, 2 & 3 BHK Apartments • Chembur</div>
+                    </div>
+                </div>
+                <div class="project-card fade-up hover-view-trigger" style="transition-delay: 0.2s;">
+                    <img src="images/signet.jpeg" alt="Trishabh Signet" loading="lazy">
+                    <div class="project-card-overlay">
+                        <h3>Trishabh Signet</h3>
+                        <div class="project-cat">3 & 4 BHK Luxury • Chembur, D.K. Sandu Marg</div>
+                    </div>
+                </div>
+                <div class="project-card fade-up hover-view-trigger" style="transition-delay: 0.3s;">
+                    <img src="images/miraya.jpeg" alt="Trishabh Miraya" loading="lazy">
+                    <div class="project-card-overlay">
+                        <h3>Trishabh Miraya</h3>
+                        <div class="project-cat">2 BHK Exclusive • Chembur, Mumbai</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-footer fade-up">
+                <div class="founder-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100" alt="Consultant" loading="lazy">
+                    <div class="founder-info">
+                        <div class="founder-role">Speak with our</div>
+                        <div class="founder-name">Sales Executive</div>
+                    </div>
+                </div>
+                <div class="projects-footer-text">Let's make something great work together. <a href="#contact" class="hover-trigger">Get Free Quote</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center; margin-bottom: 56px;">
+                <div class="pill-label dark-pill"><span class="dot"></span> Client Testimonials</div>
+                <h2 class="section-heading white-text" style="margin-top: 16px; color: var(--white);">Stories from residents who chose<br>our apartments</h2>
+            </div>
+            
+            <div class="testimonials-slider-container">
+                <div class="testimonials-track">
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"From the moment we moved in, everything felt perfect. The apartment design, amenities, and location truly exceeded our expectations."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Anjali Sharma</h4>
+                            <span class="author-role">Homeowner</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" alt="Anjali Sharma" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"The quality of construction and premium finishes are outstanding. Our family loves the open spaces and beautifully landscaped gardens."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Vikram Patel</h4>
+                            <span class="author-role">Apartment Owner</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Vikram Patel" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"A truly world-class residence. The connectivity is fantastic, and the customer support was extremely smooth and professional."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Rajesh Mehta</h4>
+                            <span class="author-role">Apartment Owner</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150" alt="Rajesh Mehta" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Chembur's finest luxury living experience. The community is lively, and the security features give us complete peace of mind."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Priya Sen</h4>
+                            <span class="author-role">Homeowner</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Priya Sen" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Spectacular views and ultimate luxury. Trishah Group has delivered exactly what they promised—absolute perfection."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Amit Sharma</h4>
+                            <span class="author-role">Penthouse Resident</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" alt="Amit Sharma" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide testimonial-card">
+                        <div class="quote-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6zM14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h4c0 4-4 6-4 6z"></path>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Every corner of our apartment reflects design excellence. It's the perfect balance of luxury, comfort, and a prime location."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Neha Gupta</h4>
+                            <span class="author-role">Apartment Owner</span>
+                        </div>
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Neha Gupta" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-footer-stars fade-up">
+                <span class="stars-score">4.9/5</span>
+                <span class="stars-gold">★★★★★</span>
+                <span class="stars-label">Our 4200 Reviews</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog section-padding">
+        <div class="container">
+            <div class="text-center" style="text-align: center; margin-bottom: 48px;">
+                <div class="pill-label"><span class="dot"></span> Latest Blog</div>
+                <h2 class="section-heading" style="margin-top: 16px;">Latest insights from real estate<br>and construction</h2>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="blog-card-img hover-trigger">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" alt="Designing a Modern Apartment" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-date">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>06 Jan, 2026</span>
+                        </div>
+                        <h3>5 Essential Tips for Designing a Modern Apartment That Feel Spacious & Stylish</h3>
+                        <div class="blog-bottom">
+                            <a href="#" class="blog-readmore hover-trigger">
+                                <span>Read More</span>
+                                <span class="arrow-circle">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="blog-card-img hover-trigger">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Modern Apartment Design" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-date">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>05 Jan, 2026</span>
+                        </div>
+                        <h3>How Modern Apartment Design Enhances Everyday Living Comfort</h3>
+                        <div class="blog-bottom">
+                            <a href="#" class="blog-readmore hover-trigger">
+                                <span>Read More</span>
+                                <span class="arrow-circle">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="blog-card-img hover-trigger">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800" alt="Creating Calm Functional Space" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-date">
+                            <svg class="calendar-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>04 Jan, 2026</span>
+                        </div>
+                        <h3>Tips for Creating a Calm and Functional Living Space at Home</h3>
+                        <div class="blog-bottom">
+                            <a href="#" class="blog-readmore hover-trigger">
+                                <span>Read More</span>
+                                <span class="arrow-circle">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA & Footer -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-text fade-right">
+                <h2>Let's find your ideal home together</h2>
+                <p>We're here to guide you every step of the way, helping you discover a home.</p>
+            </div>
+            <a href="#" class="cta-btn fade-left hover-trigger">Let's<br>Talk</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="cta-separator">
+                <div class="cta-separator-dot"></div>
+            </div>
+            
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 24px; display: inline-flex; align-items: center; gap: 10px;">
+                        <!-- Trishabh Group Official Logo -->
+                        <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50" fill="#D4621A"/>
+                            <path d="M 18 28 L 64 28 L 64 38 L 82 38 L 82 46 L 62 46 L 62 82 L 38 82 L 38 46 L 18 46 Z" fill="white"/>
+                        </svg>
+                        <div class="logo-text-block" style="display: flex; flex-direction: column; line-height: 1; gap: 1px; text-align: left;">
+                            <span class="logo-name" style="font-family: var(--font-body), sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 3px; text-indent: 3px; color: var(--white);">TRISHABH</span>
+                            <span class="logo-sub" style="font-family: var(--font-body), sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 5.5px; text-indent: 5.5px; color: rgba(255,255,255,0.65);">GROUP</span>
+                        </div>
+                    </div>
+                    <p>Premium residential developer delivering thoughtfully designed homes and elevated urban living experiences in Chembur and Navi Mumbai.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Address:</h4>
+                    <p>#4, Rishabh Shopping Centre,<br>Opp. Gulmarg Society,<br>Chembur Naka, Chembur (E),<br>Mumbai, Maharashtra 400 074</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Get in Touch:</h4>
+                    <p>Phone: <a href="tel:912225223366" class="hover-trigger">+91 22 2522 3366</a><br>E-mail: <a href="mailto:info@trishabh.com" class="hover-trigger">info@trishabh.com</a></p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Subscribe Newsletter's:</h4>
+                    <div class="footer-newsletter-wrapper">
+                        <input type="email" placeholder="Enter Your E-mail *" class="hover-trigger">
+                        <button class="footer-newsletter-btn hover-trigger">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#" class="hover-trigger">Home</a>
+                    <a href="#about" class="hover-trigger">About Us</a>
+                    <a href="#amenities" class="hover-trigger">Amenities</a>
+                    <a href="#blog" class="hover-trigger">Blogs</a>
+                    <a href="#contact" class="hover-trigger">Contact Us</a>
+                </div>
+                <div class="footer-copyright">
+                    Copyright © 2026 Trishabh Group. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts (will be loaded at bottom) -->
+    <script src="js/main.js"></script>
+</body>
+</html>
