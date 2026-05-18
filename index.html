@@ -26,20 +26,31 @@
     <!-- Hero Wrapper (contains header and hero with rounded corners) -->
     <div class="hero-wrapper">
         <div class="hero-bg">
-            <video autoplay muted playsinline id="hero-vid">
-                <source src="images/Drone_shot_over_apartment_building_202605181303.mp4" type="video/mp4">
+            <video autoplay muted playsinline loop id="hero-vid" poster="images/hero.png">
+                <!-- Video source loaded dynamically after page load to prevent initial load lag -->
             </video>
             <div class="hero-overlay"></div>
             <script>
-                const heroVid = document.getElementById('hero-vid');
-                heroVid.addEventListener('loadedmetadata', function() {
-                    if (heroVid.duration > 5) {
-                        heroVid.currentTime = heroVid.duration - 5;
-                    }
-                });
-                heroVid.addEventListener('timeupdate', function() {
-                    if (heroVid.duration > 5 && heroVid.currentTime >= heroVid.duration - 0.2) {
-                        heroVid.currentTime = heroVid.duration - 5;
+                window.addEventListener('load', function() {
+                    const heroVid = document.getElementById('hero-vid');
+                    if (heroVid) {
+                        const source = document.createElement('source');
+                        source.src = "images/Drone_shot_over_apartment_building_202605181303.mp4";
+                        source.type = "video/mp4";
+                        heroVid.appendChild(source);
+                        heroVid.load();
+                        
+                        // Wait for metadata to set duration-based looping
+                        heroVid.addEventListener('loadedmetadata', function() {
+                            if (heroVid.duration > 5) {
+                                heroVid.currentTime = heroVid.duration - 5;
+                            }
+                        });
+                        heroVid.addEventListener('timeupdate', function() {
+                            if (heroVid.duration > 5 && heroVid.currentTime >= heroVid.duration - 0.2) {
+                                heroVid.currentTime = heroVid.duration - 5;
+                            }
+                        });
                     }
                 });
             </script>
